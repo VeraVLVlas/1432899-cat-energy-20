@@ -1,25 +1,12 @@
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-
-@font-face {
-  font-family: "Oswald" "Arial" sans-serif;
-  src: url("oswaldmedium.woff2") format("woff2"),
-       url("oswaldregular.woff2") format("woff2"),
-       url("oswaldmedium.woff") format("woff"),
-       url("oswaldregular.woff") format("woff");
-}
-
-@import "variables.less";
+@import "general/normalize.less";
+@import "general/fonts.less";
+@import "general/variables.less";
+@import "general/general.less";
 @import "blocks/page";
-
 @import "blocks/page-header";
 @import "blocks/main-nav";
 @import "blocks/site-list";
 @import "blocks/button";
-
 @import "blocks/presentation-product";
 @import "blocks/product";
 @import "blocks/programs";
@@ -31,20 +18,8 @@
 @import "blocks/production";
 @import "blocks/commodity";
 @import "blocks/show-more";
-
 @import "blocks/page-footer";
 @import "blocks/information";
 @import "blocks/map";
 @import "blocks/social";
 @import "blocks/copyright";
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}

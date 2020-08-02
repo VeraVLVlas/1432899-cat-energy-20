@@ -1,24 +1,64 @@
 .list-of-programs {
   list-style: none;
   padding: 0;
+  margin: 0;
+}
+
+@media (min-width: @desktop-width) {
+  .list-of-programs {
+    display: flex;
+    justify-content: space-between;
+    width: 1220px;
+  }
 }
 
 .list-of-programs__item {
   width: 280px;
   height: 266px;
   background-color: @dull-gray;
+  margin-bottom: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .list-of-programs__item {
+    width: 708px;
+    min-height: 372px;
+    text-align: left;
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .list-of-programs__item {
+    width: 570px;
+    height: 374px;
+    margin-top: 0;
+  }
 }
 
 .list-of-programs__item:first-child {
   box-shadow: @shadow;
 }
 
+@media (min-width: @tablet-width) {
+  .list-of-programs__item:first-child {
+    margin-top: 0;
+    box-shadow: none;
+  }
+}
+
 .list-of-programs__contents {
-  font-style: normal;
-  font-weight: normal;
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
+  margin: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .list-of-programs__contents {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .list-of-programs__description {
@@ -30,12 +70,26 @@
   color: @dark-grey;
 }
 
+@media (min-width: @tablet-width) {
+  .list-of-programs__description {
+    width: 377px;
+    min-height: 96px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
 .list-of-programs__link {
-  font-style: normal;
-  font-weight: normal;
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
   text-decoration: none;
   color: @black;
+}
+
+@media (min-width: @tablet-width) {
+  .list-of-programs__link {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

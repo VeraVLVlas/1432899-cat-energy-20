@@ -7,12 +7,45 @@
 
 .page__body {
   min-height: 100%;
+  min-width: 320px;
   margin: 0;
   color: @black;
   background-color: @white;
 }
 
+.page__main {
+  width: 320px;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .page__main {
+    width: 768px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page__main {
+    width: 1440px;
+    margin: 0 auto;
+  }
+}
+
 .page__headline {
   font-size: 36px;
   line-height: 36px;
+}
+
+@media (min-width: @tablet-width) {
+  .page__headline {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page__headline {
+    padding: 0 110px;
+  }
 }

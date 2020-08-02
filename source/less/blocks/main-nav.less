@@ -1,1 +1,19 @@
-//здесь будет код
+.main-nav__toggle {
+  display: block;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav__toggle {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav__wrapper {
+    background-color: @cloudy-black;
+    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    width: 720px;
+    height: 696px;
+  }
+}

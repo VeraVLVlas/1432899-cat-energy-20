@@ -5,11 +5,29 @@
   color: @cloudy-black;
 }
 
+@media (min-width: @desktop-width) {
+  .show-more__options {
+    font-size: 20px;
+    line-height: 22px;
+    width: 194px;
+    min-height: 40px;
+  }
+}
+
 .show-more__subtitle {
   font-family: "Arial", sans-serif;
   font-size: 12px;
   line-height: 16px;
   color: @dark-grey;
+}
+
+@media (min-width: @desktop-width) {
+  .show-more__subtitle {
+    font-size: 16px;
+    line-height: 18px;
+    width: 167px;
+    min-height: 30px;
+  }
 }
 
 .show-more__open {
@@ -22,6 +40,20 @@
   padding: 20px 74px;
   display: inline-block;
   vertical-align: middle;
-  width: 279px;
   min-height: 40px;
+}
+
+@media (min-width: @desktop-width) {
+  .show-more__open {
+    font-size: 16px;
+    line-height: 0;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: @dark-grey;
+    background-color: @dull-gray;
+    padding: 20px 24px;
+    display: inline-block;
+    vertical-align: middle;
+    min-height: 40px;
+  }
 }

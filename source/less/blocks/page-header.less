@@ -1,1 +1,99 @@
-//здесь будет код
+.page-header {
+  display: flex;
+  flex-direction: column;
+  background-color: @white;
+  color: @black;
+  width: 320px;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    width: 768px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    width: 1440px;
+    margin: 0 auto;
+    min-height: 817px;
+  }
+}
+
+.page-header__catalog {
+  width: 320px;
+  margin: 0 auto;
+  min-height: 60px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__catalog {
+    width: 768px;
+    margin: 0 auto;
+    min-height: 52px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__catalog {
+    width: 1440px;
+    margin: 0 auto;
+    height: 60px;
+  }
+}
+
+.page-header__wrapper {
+  width: 280px;
+  padding: 0 20px;
+  display: grid;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__wrapper {
+    width: 709px;
+    padding: 0 30px;
+    display: flex;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__wrapper {
+    width: 1440px;
+    height: 60px;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 110px;
+    position: relative;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__wrapper-catalog {
+    width: 1121px;
+    height: 60px;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 110px;
+    position: relative;
+  }
+}
+
+.page-header__logo-wrapper {
+  display: flex;
+  justify-content: space-between;
+  height: 38px;
+}
+
+.page-header__logo {
+  margin-top: 12px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__logo {
+    margin-top: 24px;
+  }
+}

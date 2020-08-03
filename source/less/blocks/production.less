@@ -1,19 +1,18 @@
 .production {
   width: 280px;
   padding: 0 20px;
-}
 
-@media (min-width: @tablet-width) {
-  .production {
+  @media (min-width: @tablet-width) {
     width: 708px;
     padding: 0 30px;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .production {
-    width: 1220px;
+  @media (min-width: @desktop-width) {
+    width: 1440px;
     padding: 0 110px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 
@@ -21,23 +20,16 @@
   list-style: none;
   margin: 0;
   padding: 0;
-}
 
-@media (min-width: @tablet-width) {
-  .production__list {
+  @media (min-width: @tablet-width) {
     width: 708px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .production__list {
+  @media (min-width: @desktop-width) {
     width: 1220px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
   }
 }
 
@@ -45,31 +37,17 @@
   text-decoration: none;
   width: 280px;
   min-height: 192px;
-}
 
-@media (min-width: @tablet-width) {
-  .production__item {
+  @media (min-width: @tablet-width) {
     width: 324px;
     min-height: 511px;
     background-color: @dull-gray;
     margin-bottom: 59px;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .production__item {
+  @media (min-width: @desktop-width) {
     width: 245px;
-    min-height: 511px;
-    background-color: @dull-gray;
     margin-bottom: 63px;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .production__item:last-child {
-    border: 2px solid @dull-gray;
-    background-color: white;
-    text-align: center;
   }
 }
 
@@ -77,20 +55,16 @@
   display: flex;
   width: 282px;
   min-height: 112px;
-}
 
-@media (min-width: @tablet-width) {
-  .production__wrapper {
+  @media (min-width: @tablet-width) {
     display: grid;
     width: 252px;
     min-height: 391px;
     align-items: center;
     margin: 0 auto;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .production__wrapper {
+  @media (min-width: @desktop-width) {
     padding-left: 40px;
   }
 }

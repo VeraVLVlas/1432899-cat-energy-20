@@ -9,13 +9,13 @@
 </head>
 
 <body class="page__body">
-  <header class="page-header__catalog">
-    <div class="page-header__wrapper page-header__wrapper-catalog">
+  <header class="page-header__catalog page-header--inner">
+    <div class="page-header__wrapper page-header__wrapper--catalog">
       <div class="page-header__logo-wrapper">
         <a class="page-header__logo" href="index.html">
           <img src="#" width="33" height="38" alt="Логотип «Cat energy»">
         </a>
-        <button class="main-nav__toggle" type="button">
+        <button class="page-header__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
       </div>
@@ -25,17 +25,17 @@
             <a class="site-list__link site-list__link-catalog">Главная</a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__link site-list__link-catalog">Каталог&nbsp;продукции</a>
+            <a class="site-list__link site-list__link-catalog">Каталог продукции</a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__link site-list__link-catalog" href="form.html">Подбор&nbsp;программы</a>
+            <a class="site-list__link site-list__link-catalog" href="form.html">Подбор программы</a>
           </li>
         </ul>
       </nav>
     </div>
   </header>
   <main class="page__main">
-    <h1 class="page__headline">Каталог&nbsp;продукции</h1>
+    <h1 class="page__headline">Каталог продукции</h1>
     <section class="production">
       <ul class="production__list">
         <li class="production__item">
@@ -95,7 +95,7 @@
         <li class="production__item">
           <div class="production__wrapper">
             <a class="production__link-picture" href="#">
-              <img class="picture" src="#" width="140" height="112" alt="Cat energy с рыбой">
+              <img class="production__item-picture" src="#" width="140" height="112" alt="Cat energy с рыбой">
             </a>
             <div class="production__item-wrapper">
               <a class="production__link-title" href="#">
@@ -122,7 +122,7 @@
         <li class="production__item">
           <div class="production__wrapper">
             <a class="production__link-picture" href="#">
-              <img class="picture" src="#" width="140" height="112" alt="Cat energy с рыбой">
+              <img class="production__item-picture" src="#" width="140" height="112" alt="Cat energy с рыбой">
             </a>
             <div class="production__item-wrapper">
               <a class="production__link-title" href="#">
@@ -149,7 +149,7 @@
         <li class="production__item">
           <div class="production__wrapper">
             <a class="production__link-picture" href="#">
-              <img class="picture" src="#" width="140" height="112" alt="Cat energy с гречкой">
+              <img class="production__item-picture" src="#" width="140" height="112" alt="Cat energy с гречкой">
             </a>
             <div class="production__item-wrapper">
               <a class="production__link-title" href="#">
@@ -176,7 +176,7 @@
         <li class="production__item">
           <div class="production__wrapper">
             <a class="production__link-picture" href="#">
-              <img class="picture" src="#" width="140" height="112" alt="Cat energy с гречкой">
+              <img class="production__item-picture" src="#" width="140" height="112" alt="Cat energy с гречкой">
             </a>
             <div class="production__item-wrapper">
               <a class="production__link-title" href="#">
@@ -203,7 +203,7 @@
         <li class="production__item">
           <div class="production__wrapper">
             <a class="production__link-picture" href="#">
-              <img class="picture" src="#" width="140" height="112" alt="Cat energy с рисом">
+              <img class="production__item-picture" src="#" width="140" height="112" alt="Cat energy с рисом">
             </a>
             <div class="production__item-wrapper">
               <a class="production__link-title" href="#">
@@ -227,14 +227,12 @@
           </div>
           <a class="button button--active" href="#">Заказать</a>
         </li>
-        <li class="production__item">
-          <div class="show-more">
-            <p class="show-more__options">Показать&nbsp;еще 100500 товаров</p>
-            <p class="show-more__subtitle">На самом деле вкусов гораздо больше!</p>
-            <a class="show-more__open" href="#">Показать все</a>
-          </div>
-        </li>
       </ul>
+        <div class="show-more">
+          <p class="show-more__options">Показать еще 100500 товаров</p>
+          <p class="show-more__subtitle">На самом деле вкусов гораздо больше!</p>
+          <a class="show-more__open" href="#">Показать все</a>
+        </div>
     </section>
     <section class="assortment">
       <h2 class="assortment__title">Дополнительные товары</h2>
@@ -287,7 +285,7 @@
       <!--Здесь будет интерактивная карта -->
     </div>
     <div class="page-footer__wrapper-footer">
-      <a class="page-footer__picture">
+      <a class="page-footer__logo">
         <img src="#" width="128" height="24" alt="Cat energy">
       </a>
       <div class="page-footer__social social">

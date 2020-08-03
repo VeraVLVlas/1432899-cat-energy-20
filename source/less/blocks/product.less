@@ -5,10 +5,8 @@
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat no-repeat;
   text-align: center;
-}
 
-@media (min-width: @tablet-width) {
-  .product {
+  @media (min-width: @tablet-width) {
     width: 709px;
     height: 893px;
     padding: 0 30px;
@@ -17,15 +15,11 @@
     text-align: left;
     position: relative;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .product {
+  @media (min-width: @desktop-width) {
     width: 920px;
     height: 499px;
     background-color: transparent;
-    background-image: none;
-    text-align: left;
     position: absolute;
     top: 0;
   }
@@ -37,24 +31,18 @@
   color: @white;
   margin: 0;
   padding-top: 27px;
-}
 
-@media (min-width: @tablet-width) {
-  .product__for-cats {
+  @media (min-width: @tablet-width) {
     font-size: 60px;
     line-height: 60px;
     color: @black;
-    margin: 0;
     padding-top: 67px;
     padding-left: 117px;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .product__for-cats {
+  @media (min-width: @desktop-width) {
     padding-top: 223px;
     padding-left: 0;
-    font-family: inherit;
     width: 414px;
   }
 }
@@ -67,58 +55,50 @@
   margin: 0;
   padding-top: 25px;
   padding-bottom: 29px;
-}
 
-@media (min-width: @tablet-width) {
-  .product__intro {
+  &::after {
+    content: "";
+    background-image: url("../img/index-can-mobile@1x.png");
+    background-repeat: no-repeat;
+    width: 320px;
+    height: 305px;
+    display: block;
+  }
+
+  @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 20px;
-    text-transform: uppercase;
     color: @black;
-    margin: 0;
     padding-top: 41px;
     padding-left: 117px;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .product__intro {
+  @media (min-width: @desktop-width) {
     padding-top: 40px;
     padding-left: 0;
   }
-}
 
-.product__intro::after {
-  content: "";
-  background-image: url("../img/index-can-mobile@1x.png");
-  background-repeat: no-repeat;
-  width: 320px;
-  height: 305px;
-  display: block;
-}
-
-@media (min-width: @tablet-width) {
-  .product__intro::after {
-    content: "";
-    background-image: url("../img/index-can-tablet@1x.jpg");
-    background-repeat: no-repeat;
-    width: 709px;
-    height: 609px;
-    display: block;
-    margin-top: 27px;
-    background-position-x: 43px;
+  @media (min-width: @tablet-width) {
+    &::after {
+      content: "";
+      background-image: url("../img/index-can-tablet@1x.jpg");
+      width: 709px;
+      height: 609px;
+      margin-top: 27px;
+      background-position-x: 43px;
+    }
   }
-}
 
-@media (min-width: @desktop-width) {
-  .product__intro::after {
-    content: "";
-    background-image: url("../img/index-can-desktop@1x.png");
-    width: 552px;
-    height: 449px;
-    position: absolute;
-    bottom: -100px;
-    right: -150px;
+  @media (min-width: @desktop-width) {
+    &::after {
+      content: "";
+      background-image: url("../img/index-can-desktop@1x.png");
+      width: 552px;
+      height: 449px;
+      position: absolute;
+      bottom: -100px;
+      right: -150px;
+    }
   }
 }
 
@@ -135,28 +115,19 @@
   text-align: center;
   border: none;
   margin: 3px auto 0;
-}
 
-@media (min-width: @tablet-width) {
-  .product__button {
+  @media (min-width: @tablet-width) {
     font-size: 20px;
     padding: 16px 6px 12px;
     width: 284px;
-    height: 54px;
+    min-height: 54px;
     position: absolute;
     top: 290px;
     left: 145px;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .product__button {
-    font-size: 20px;
-    padding: 16px 6px 12px;
-    width: 284px;
-    height: 54px;
-    position: absolute;
-    top: 450px;
+  @media (min-width: @desktop-width) {
+    top: 490px;
     left: 30px;
   }
 }

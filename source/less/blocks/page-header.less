@@ -1,1 +1,89 @@
-//здесь будет код
+.page-header {
+  display: flex;
+  flex-direction: column;
+  background-color: @white;
+  color: @black;
+  width: 320px;
+  min-height: 199px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    min-height: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+    min-height: 696px;
+  }
+}
+
+.page-header--inner {
+  width: 320px;
+  margin: 0 auto;
+  min-height: 60px;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    min-height: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+  }
+}
+
+.page-header__wrapper {
+  width: 280px;
+  padding: 0 20px;
+  display: grid;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    width: 768px;
+    padding: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+    min-height: 60px;
+    padding: 0;
+    justify-content: space-between;
+    padding-left: 110px;
+    position: relative;
+  }
+}
+
+.page-header__wrapper--inner {
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+    min-height: 60px;
+    padding: 0 110px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+}
+
+.page-header__logo-wrapper {
+  display: flex;
+  justify-content: space-between;
+  height: 38px;
+}
+
+.page-header__logo {
+  margin-top: 12px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 24px;
+  }
+}
+
+.page-header__toggle {
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}

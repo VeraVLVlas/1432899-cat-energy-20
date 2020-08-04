@@ -39,9 +39,10 @@
   display: grid;
 
   @media (min-width: @tablet-width) {
-    width: 709px;
-    padding: 0 30px;
     display: flex;
+    justify-content: space-between;
+    width: 768px;
+    padding: 0 30px;
   }
 
   @media (min-width: @desktop-width) {
@@ -54,14 +55,13 @@
   }
 }
 
-.page-header__wrapper-catalog {
+.page-header__wrapper--inner {
   @media (min-width: @desktop-width) {
-    width: 1121px;
-    height: 60px;
-    padding: 0;
+    width: 1440px;
+    min-height: 60px;
+    padding: 0 110px;
     display: flex;
     justify-content: space-between;
-    padding-left: 110px;
     position: relative;
   }
 }

@@ -1,6 +1,52 @@
+.case-study {
+  width: 280px;
+  min-height: 208px;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
+}
+
+.case-study--wrapper {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    align-items: center;
+    width: 1440px;
+    background-color: @white;
+    padding: 0 110px;
+  }
+}
+
 .case-study__caption {
   font-size: 36px;
   line-height: 40px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+.case-study--wrapper-study {
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+    padding: 0 110px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.case-study--wrapper-text {
+  @media (min-width: @desktop-width) {
+    width: 436px;
+    height: 317px;
+    padding: 0;
+  }
 }
 
 .case-study__text {
@@ -8,11 +54,46 @@
   font-size: 14px;
   line-height: 18px;
   color: @dark-grey;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.case-study__general {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 768px;
+    min-height: 64px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.case-study__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 282px;
+  min-height: 64px;
+  text-align: center;
 }
 
 .case-study__digit {
   font-size: 24px;
   line-height: 24px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .case-study__description {
@@ -20,10 +101,37 @@
   font-size: 12px;
   line-height: 12px;
   color: @dark-grey;
+
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+    line-height: 14px;
+  }
 }
 
 .case-study__expenses {
   font-size: 14px;
   line-height: 20px;
   text-transform: uppercase;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    width: 204px;
+    text-align: end;
+    margin-right: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 436px;
+    text-align: left;
+  }
+}
+
+.case-study__view-result {
+  text-align: center;
+
+  @media (min-width: @desktop-width) {
+    width: 690px;
+    min-height: 656px;
+  }
 }

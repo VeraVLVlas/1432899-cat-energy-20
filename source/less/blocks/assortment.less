@@ -1,6 +1,40 @@
+.assortment {
+  width: 320px;
+  padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    padding: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+    padding: 0 110px;
+  }
+}
+
 .assortment__title {
   font-size: 24px;
   line-height: 24px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    padding-left: 37px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 0;
+  }
+}
+
+.assortment__wrapper {
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .assortment__stock-wrapper {

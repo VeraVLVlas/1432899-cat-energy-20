@@ -76,27 +76,35 @@
     <section class="result">
       <h2 class="visually-hidden">Результат нашей программы</h2>
       <div class="case-study">
-        <h3 class="case-study__caption">Живой пример</h3>
-        <p class="case-study__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
-          Отличный результат без изнуряющих тренировок!
-          При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
-        </p>
-        <div class="case-study__wrapper">
-          <div class="case-study__effect">
-            <p class="case-study__digit">5 кг</p>
-            <span class="case-study__description">Снижение веса</span>
+        <div class="case-study case-study--wrapper">
+          <h3 class="case-study__caption">Живой пример</h3>
+        </div>
+        <div class="case-study case-study--wrapper-study">
+          <div class="case-study case-study--wrapper-text">
+            <p class="case-study__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
+              Отличный результат без изнуряющих тренировок!
+              При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+            </p>
+            <div class="case-study__general">
+              <div class="case-study__wrapper">
+                <div class="case-study__effect">
+                  <p class="case-study__digit">5 кг</p>
+                  <span class="case-study__description">Снижение веса</span>
+                </div>
+                <div class="case-study__effect">
+                  <p class="case-study__digit">60 дней</p>
+                  <span class="case-study__description">Затрачено времени</span>
+                </div>
+              </div>
+              <p class="case-study__expenses">Затраты на питание: 15 000 РУБ.</p>
+            </div>
           </div>
-          <div class="case-study__effect">
-            <p class="case-study__digit">60 дней</p>
-            <span class="case-study__description">Затрачено времени</span>
+          <div class="case-study__view-result">
+            <label for="result">
+              Было<input type="range" id="result" name="field">Стало
+            </label>
           </div>
         </div>
-        <p class="case-study__expenses">Затраты на питание: 15 000 РУБ.</p>
-      </div>
-      <div class="case-study__view-result">
-        <label for="result">
-          Было<input type="range" id="result" name="field">Стало
-        </label>
       </div>
     </section>
   </main>

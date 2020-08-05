@@ -1,3 +1,25 @@
+.information {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: @white;
+  width: 320px;
+  min-height: 114px;
+  padding: 0 20px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    min-height: 201px;
+    padding: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 570px;
+    min-height: 201px;
+  }
+}
+
 .information__dealer {
   font-size: 16px;
   line-height: 18px;
@@ -5,6 +27,12 @@
   color: @cloudy-black;
   width: 140px;
   min-height: 64px;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 21px;
+  }
 }
 
 .information__address {
@@ -14,4 +42,11 @@
   color: @dark-grey;
   width: 140px;
   min-height: 50px;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    width: 159px;
+    height: 80px;
+  }
 }

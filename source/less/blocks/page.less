@@ -6,6 +6,9 @@
 }
 
 .page__body {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
   min-height: 100%;
   min-width: 320px;
   margin: 0;
@@ -29,18 +32,17 @@
 .page__headline {
   font-size: 36px;
   line-height: 36px;
-}
+  width: 320px;
+  padding: 0 20px;
 
-@media (min-width: @tablet-width) {
-  .page__headline {
+  @media (min-width: @tablet-width) {
     font-size: 60px;
     line-height: 60px;
     padding: 0 30px;
+    width: 700px;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .page__headline {
+  @media (min-width: @desktop-width) {
     padding: 0 110px;
   }
 }

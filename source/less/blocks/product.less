@@ -1,10 +1,37 @@
 .product {
   width: 320px;
+  min-height: 480px;
+
+  @media (min-width: @tablet-width) {
+    width: 709px;
+    min-height: 950px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 900px;
+    min-height: 366px;
+    position: absolute;
+    top: 0;
+    margin-left: 110px;
+  }
+}
+
+.product__wrapper {
+  width: 320px;
   height: 305px;
   background-color: @green;
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat no-repeat;
   text-align: center;
+
+  &::after {
+    content: "";
+    background-image: url("../img/index-can-mobile@1x.png");
+    background-repeat: no-repeat;
+    width: 320px;
+    height: 305px;
+    display: block;
+  }
 
   @media (min-width: @tablet-width) {
     width: 709px;
@@ -20,8 +47,28 @@
     width: 920px;
     height: 499px;
     background-color: transparent;
-    position: absolute;
-    top: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    &::after {
+      content: "";
+      background-image: url("../img/index-can-tablet@1x.jpg");
+      width: 709px;
+      height: 609px;
+      background-position-x: 50px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::after {
+      content: "";
+      background-image: url("../img/index-can-desktop@1x.png");
+      width: 659px;
+      height: 449px;
+      position: absolute;
+      bottom: -100px;
+      right: -150px;
+    }
   }
 }
 
@@ -43,7 +90,7 @@
   @media (min-width: @desktop-width) {
     padding-top: 223px;
     padding-left: 0;
-    width: 414px;
+    width: 484px;
   }
 }
 
@@ -56,15 +103,6 @@
   padding-top: 25px;
   padding-bottom: 29px;
 
-  &::after {
-    content: "";
-    background-image: url("../img/index-can-mobile@1x.png");
-    background-repeat: no-repeat;
-    width: 320px;
-    height: 305px;
-    display: block;
-  }
-
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 20px;
@@ -76,29 +114,6 @@
   @media (min-width: @desktop-width) {
     padding-top: 40px;
     padding-left: 0;
-  }
-
-  @media (min-width: @tablet-width) {
-    &::after {
-      content: "";
-      background-image: url("../img/index-can-tablet@1x.jpg");
-      width: 709px;
-      height: 609px;
-      margin-top: 27px;
-      background-position-x: 43px;
-    }
-  }
-
-  @media (min-width: @desktop-width) {
-    &::after {
-      content: "";
-      background-image: url("../img/index-can-desktop@1x.png");
-      width: 552px;
-      height: 449px;
-      position: absolute;
-      bottom: -100px;
-      right: -150px;
-    }
   }
 }
 

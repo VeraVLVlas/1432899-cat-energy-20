@@ -35,48 +35,106 @@
 
 .production__item {
   text-decoration: none;
-  width: 280px;
+  width: 282px;
   min-height: 192px;
+  padding-top: 11px;
+  border-bottom: 1px solid @gray-line;
+
+  &:last-child {
+    width: 278px;
+    min-height: 158px;
+    text-align: center;
+  }
 
   @media (min-width: @tablet-width) {
     width: 324px;
     min-height: 511px;
-    background-color: @dull-gray;
+    background-color: @white;
     margin-bottom: 59px;
+    padding-top: 0;
+    border-bottom: none;
+
+    &:last-child {
+      width: 324px;
+      min-height: 511px;
+    }
   }
 
   @media (min-width: @desktop-width) {
     width: 245px;
     margin-bottom: 63px;
+
+    &:last-child {
+      width: 245px;
+    }
   }
 }
 
 .production__wrapper {
-  display: flex;
   width: 282px;
   min-height: 112px;
 
   @media (min-width: @tablet-width) {
-    display: grid;
-    width: 252px;
-    min-height: 391px;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 324px;
+    min-height: 430px;
     margin: 0 auto;
+    background-color: @dull-gray;
+    position: relative;
+    margin-top: 81px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 40px;
+    width: 245px;
+    min-height: 431px;
+  }
+}
+
+.production__wrapper-mobile {
+  @media (max-width: @mobile-width) {
+    display: flex;
+  }
+}
+
+.production__item-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media (min-width: @tablet-width) {
+    align-items: center;
+    width: 252px;
+    margin: 0 auto;
+    padding-bottom: 33px;
+    padding-top: 34px;
   }
 }
 
 .production__link-title {
   text-decoration: none;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 33px;
+  }
 }
 
 .production__name {
+  font-weight: normal;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
   color: @light-black;
   margin: 0;
+  width: 76px;
+  min-height: 41px;
+
+  @media (min-width: @tablet-width) {
+    width: 174px;
+    min-height: 47px;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+  }
 }

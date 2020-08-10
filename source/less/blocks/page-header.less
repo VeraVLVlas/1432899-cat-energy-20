@@ -4,8 +4,8 @@
   background-color: @white;
   color: @black;
   width: 320px;
-  min-height: 199px;
   margin: 0 auto;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     width: 768px;
@@ -22,10 +22,13 @@
   width: 320px;
   margin: 0 auto;
   min-height: 60px;
+  border-bottom: 1px solid @gray-line;
 
   @media (min-width: @tablet-width) {
     width: 768px;
     min-height: 60px;
+    margin-bottom: 65px;
+    border-bottom: none;
   }
 
   @media (min-width: @desktop-width) {
@@ -34,8 +37,7 @@
 }
 
 .page-header__wrapper {
-  width: 280px;
-  padding: 0 20px;
+  width: 320px;
   display: grid;
 
   @media (min-width: @tablet-width) {
@@ -43,15 +45,17 @@
     justify-content: space-between;
     width: 768px;
     padding: 0 30px;
+    margin-top: 24px;
   }
 
   @media (min-width: @desktop-width) {
+    position: relative;
     width: 1440px;
     min-height: 60px;
     padding: 0;
     justify-content: space-between;
     padding-left: 110px;
-    position: relative;
+    margin-top: 0;
   }
 }
 
@@ -69,19 +73,49 @@
 .page-header__logo-wrapper {
   display: flex;
   justify-content: space-between;
-  height: 38px;
+  align-items: center;
+  width: 320px;
+  min-height: 38px;
+  padding: 0 20px;
+  margin-top: 12px;
+  margin-bottom: 16px;
+
+  @media (min-width: @tablet-width) {
+    width: 190px;
+    min-height: 52px;
+    padding: 0;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 202px;
+    height: 59px;
+    margin-top: 53px;
+  }
 }
 
 .page-header__logo {
-  margin-top: 12px;
+  width: 190px;
+  height: 38px;
 
-  @media (min-width: @tablet-width) {
-    margin-top: 24px;
+  @media (min-width: @desktop-width) {
+    width: 202px;
+    height: 59px;
   }
 }
 
 .page-header__toggle {
   display: block;
+  width: 24px;
+  min-height: 18px;
+  background-color: @white;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 0;
+  background-image: url("../img/icon-mobile-menu.svg");
+  background-repeat: no-repeat;
+  margin-top: 5px;
 
   @media (min-width: @tablet-width) {
     display: none;

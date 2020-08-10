@@ -15,7 +15,7 @@
 .page-footer__wrapper-footer {
   width: 320px;
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 95px 1fr 1fr;
   align-items: center;
   text-align: center;
   padding: 0 20px;
@@ -33,6 +33,27 @@
     width: 1440px;
     padding: 0 110px;
     min-height: 149px;
+  }
+}
+
+.page-footer__logo {
+  padding-top: 39px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid @gray-line;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    border-bottom: none;
+  }
+}
+
+.page-footer__social {
+  padding-bottom: 21px;
+  border-bottom: 1px solid @gray-line;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    border-bottom: none;
   }
 }
 

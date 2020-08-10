@@ -33,13 +33,18 @@
   font-size: 36px;
   line-height: 36px;
   width: 320px;
-  padding: 0 20px;
+  min-height: 104px;
+  margin: 0 0 8px;
+  padding: 27px 20px 0;
+  border-bottom: 1px solid @gray-line;
 
   @media (min-width: @tablet-width) {
+    width: 700px;
     font-size: 60px;
     line-height: 60px;
     padding: 0 30px;
-    width: 700px;
+    margin-bottom: 83px;
+    border-bottom: none;
   }
 
   @media (min-width: @desktop-width) {

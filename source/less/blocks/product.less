@@ -6,34 +6,31 @@
     width: 709px;
     min-height: 950px;
     padding: 0 30px;
-
-    &::after {
-      content: "";
-      display: block;
-      background-image: url("../img/index-can-tablet@1x.jpg");
-      background-repeat: no-repeat;
-      width: 709px;
-      height: 609px;
-      background-position-x: 50px;
-    }
   }
 
   @media (min-width: @desktop-width) {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    position: absolute;
-    top: 0;
-    margin-top: 190px;
-    margin-left: 150px;
-    width: 1050px;
-    min-height: 499px;
+    justify-content: space-between;
+    position: relative;
+    z-index: 5;
+    width: 1440px;
+    min-height: 696px;
+    background-color: transparent;
+    padding-left: 220px;
+    margin-bottom: 80px;
+  }
 
+  @media (min-width: @desktop-width) {
     &::after {
       content: "";
-      background-image: url("../img/index-can-desktop@1x.png");
-      width: 659px;
-      height: 449px;
+      display: block;
+      background-color: @green;
+      background-image: url("../img/index-background-desktop@1x.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 720px;
+      height: 696px;
     }
   }
 }
@@ -57,10 +54,10 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 280px;
-    height: 499px;
+    width: 550px;
+    min-height: 499px;
     background-color: transparent;
-    padding: 0;
+    padding: 100px 0 0;
   }
 }
 
@@ -92,17 +89,7 @@
   color: @white;
   margin: 0;
   padding-top: 25px;
-
-  @media (max-width: @mobile-width) {
-    &::after {
-      content: "";
-      background-image: url("../img/index-can-mobile@1x.png");
-      background-repeat: no-repeat;
-      width: 320px;
-      height: 305px;
-      display: block;
-    }
-  }
+  padding-bottom: 25px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -116,6 +103,24 @@
     width: 303px;
     padding-top: 40px;
     padding-left: 0;
+  }
+}
+
+.product__picture {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    transform: translateY(-5%);
+    left: 10%;
+    z-index: 1;
+    width: 709px;
+    height: 609px;
+  }
+
+  @media (min-width: @desktop-width) {
+    transform: translateY(-55%);
+    left: 70%;
+    width: 552px;
+    height: 499px;
   }
 }
 
@@ -134,6 +139,8 @@
   margin: 3px auto 0;
 
   @media (min-width: @tablet-width) {
+    position: relative;
+    z-index: 4;
     font-size: 20px;
     padding: 16px 6px 12px;
     width: 284px;

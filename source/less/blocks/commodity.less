@@ -1,7 +1,44 @@
+.commodity {
+  width: 142px;
+  min-height: 44px;
+
+  @media (min-width: @tablet-width) {
+    width: 252px;
+    min-height: 32px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 180px;
+    min-height: 96px;
+  }
+}
+
+.commodity__characteristic {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 142px;
+  min-height: 14px;
+
+  @media (min-width: @tablet-width) {
+    width: 252px;
+    min-height: 32px;
+    border-bottom: 1px solid @gray-frame;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 180px;
+  }
+}
+
 .commodity__data,
 .commodity__value {
   font-family: "Arial", sans-serif;
   font-size: 12px;
   line-height: 16px;
   color: @dark-grey;
+
+  @media (min-width: @tablet-width) {
+    line-height: 16px;
+  }
 }

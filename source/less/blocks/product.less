@@ -17,20 +17,17 @@
     width: 1440px;
     min-height: 696px;
     background-color: transparent;
-    padding-left: 220px;
+    padding: 0 0 0 110px;
     margin-bottom: 80px;
-  }
 
-  @media (min-width: @desktop-width) {
     &::after {
       content: "";
       display: block;
       background-color: @green;
       background-image: url("../img/index-background-desktop@1x.jpg");
       background-repeat: no-repeat;
-      background-size: cover;
       width: 720px;
-      height: 696px;
+      min-height: 696px;
     }
   }
 }
@@ -110,7 +107,7 @@
   @media (min-width: @tablet-width) {
     position: absolute;
     transform: translateY(-5%);
-    left: 10%;
+    left: 8%;
     z-index: 1;
     width: 709px;
     height: 609px;

@@ -21,10 +21,13 @@
   @media (min-width: @tablet-width) {
     width: 768px;
     padding: 0;
+    border: 1px solid @border;
   }
 
   @media (min-width: @desktop-width) {
+    width: 1440px;
     padding: 0;
+    border: none;
   }
 }
 
@@ -191,30 +194,10 @@
   text-align: center;
   margin: 0 auto;
 
-  &::before {
-    content: "";
-    display: block;
-    background-image: url("../img/before-mobile@1x.png");
-    background-repeat: no-repeat;
-    width: 311px;
-    height: 232px;
-  }
-
   @media (min-width: @tablet-width) {
-    width: 768px;
     min-height: 462px;
     background-color: @light-gray;
     margin-top: 191px;
-
-    &::before {
-      background-image: url("../img/before-tablet@1x.png");
-      width: 708px;
-      height: 620px;
-      transform: translateX(5%);
-      position: relative;
-      top: -150px;
-      margin: 0 auto;
-    }
   }
 
   @media (min-width: @desktop-width) {
@@ -222,5 +205,133 @@
     min-height: 656px;
     margin-top: 0;
     background-color: @dull-gray;
+  }
+}
+
+.case-study__wrapper-results {
+  @media (min-width: @tablet-width) {
+    padding: 0 30px;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.case-study__picture-before {
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    width: 354px;
+    height: 607px;
+    order: 1;
+    overflow: hidden;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: @light-gray;
+  }
+}
+
+.case-study__before {
+  position: absolute;
+  z-index: 1;
+  left: 10px;
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    left: 0;
+    margin-left: -125px;
+  }
+}
+
+.case-study__picture-after {
+  @media (min-width: @tablet-width) {
+    width: 354px;
+    height: 620px;
+    padding-left: 200px;
+    overflow: hidden;
+  }
+}
+
+.case-study__after {
+  position: relative;
+  left: -5px;
+  z-index: 5;
+}
+
+.case-study__wrapper-button {
+  width: 165px;
+  min-height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.case-study__switch {
+  width: 84px;
+  height: 14px;
+  border: 1px solid @gray-frame;
+  border-radius: 6px;
+  background-color: @white;
+  position: relative;
+}
+
+.case-study__switch-handle {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 81px;
+  padding: 3px 6px;
+}
+
+.case-study__button-off,
+.case-study__button-on {
+  width: 35px;
+  height: 6px;
+  border: none;
+  border-radius: 6px;
+  background-color: @green;
+}
+
+.case-study__button-off {
+  display: none;
+}
+
+.case-study__wrapper-range {
+  padding: 67px 0;
+
+  @media (max-width: @mobile-width) {
+    display: none;
+  }
+}
+//Оформление инпут рэндж
+.case-study__range {
+  width: 428px;
+  height: 6px;
+  background: transparent;
+  margin-left: 25px;
+  margin-right: 25px;
+  //оформление ползунка
+  &::-webkit-slider-thumb {
+    border: 1px solid @gray-frame;
+    height: 34px;
+    width: 34px;
+    border-radius: 50px;
+    background-color: transparent;
+    cursor: pointer;
+    margin-top: -5px;
+  }
+  //оформление дорожки
+  &::-webkit-slider-runnable-track {
+    width: 428px;
+    height: 6px;
+    cursor: pointer;
+    background-color: @gray-frame;
+    border-radius: 6px;
   }
 }

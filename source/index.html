@@ -20,22 +20,22 @@
         </button>
       </div>
       <div>
-      <nav class="main-nav">
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active">
-              <a class="site-list__link">Главная</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="catalog.html">Каталог продукции</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="form.html">Подбор программы</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
+        <nav class="main-nav">
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list site-list">
+              <li class="site-list__item site-list__item--active">
+                <a class="site-list__link">Главная</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="catalog.html">Каталог продукции</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="form.html">Подбор программы</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </div>
   </header>
   <main class="page__main">
@@ -115,12 +115,32 @@
             </div>
           </div>
           <div class="case-study__view-result">
-            <label for="result">
-              Было<input type="range" id="result" name="field">Стало
-            </label>
-          </div>
+            <div class="case-study__wrapper-results">
+              <div class="case-study__picture-before">
+                <img class="case-study__before" src="img/after-mobile@1x.png" width="251" height="240" alt="Фото кота до программы">
+              </div>
+              <div class="case-study__picture-after">
+                <img class="case-study__after" src="img/before-mobile@1x.png" width="300" height="232" alt="Фото кота после программы">
+              </div>
+            </div>
+            <div class="case-study__wrapper-button">
+              Было
+              <div class="case-study__switch">
+                <div class="case-study__switch-handle">
+                  <button class="case-study__button-on" type="button" name="button"></button>
+                  <button class="case-study__button-off" type="button" name="button"></button>
+                </div>
+              </div>
+              Стало
+            </div>
+            <div class="case-study__wrapper-range">
+              <label class="case-study__label" for="result">
+                Было<input class="case-study__range" type="range" id="result" name="field">Стало
+              </label>
+            </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
   </main>

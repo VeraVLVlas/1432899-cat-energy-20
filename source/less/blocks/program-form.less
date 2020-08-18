@@ -32,6 +32,8 @@
 }
 
 .program-form__general-information {
+  padding: 0 20px;
+
   @media (min-width: @desktop-width) {
     width: 1220px;
     display: flex;
@@ -43,8 +45,7 @@
 .program-form__fieldset {
   border: none;
   margin: 0;
-  width: 320px;
-  padding: 0 20px;
+  padding: 0;
 
   &--border {
     border-bottom: 1px solid @gray-background;
@@ -185,7 +186,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-bottom: 34px;
+    padding: 0 20px 34px;
   }
 
   @media (min-width: @tablet-width) {
@@ -208,12 +209,25 @@
 
 .program-form__list--radio {
   width: 277px;
-  height: 115px;
+  min-height: 115px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding-top: 20px;
   padding-bottom: 22px;
+
+  @media (min-width: @tablet-width) {
+    width: 630px;
+    min-height: 200px;
+    padding-left: 28px;
+    border: 1px solid @gray-form;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 568px;
+    min-height: 200px;
+    margin-left: 80px;
+  }
 }
 
 .program-form__radio-label {
@@ -230,19 +244,73 @@
   line-height: 26px;
   padding-top: 26px;
   padding-bottom: 32px;
+  padding-left: 19px;
+  width: 189px;
+  min-height: 26px;
+  background-color: white;
+
+  &::after {
+    content: "";
+    display: block;
+    border: 2px solid @green;
+    width: 301px;
+    position: relative;
+    top: -12px;
+    z-index: -1;
+  }
+
+  &--border {
+    width: 250px;
+    min-height: 52px;
+    padding-left: 19px;
+    background-color: white;
+
+    &::after {
+      content: "";
+      display: block;
+      border: 2px solid @green;
+      width: 301px;
+      position: relative;
+      top: -37px;
+      z-index: -1;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
-    margin-bottom: 76px;
+    width: 260px;
+    min-height: 36px;
+
+    &--border {
+      font-size: 36px;
+      line-height: 36px;
+      margin-bottom: 76px;
+      width: 582px;
+      min-height: 36px;
+    }
+
+    &::after {
+      width: 768px;
+      transform: translateX(-88px);
+      top: -15px;
+    }
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 57px;
+
+    &::after {
+      width: 1440px;
+      transform: translateX(-131px);
+      top: -15px;
+    }
   }
 }
 
 .program-form__wrapper {
+  padding: 0 20px;
+
   @media (min-width: @tablet-width) {
     width: 632px;
   }
@@ -258,6 +326,7 @@
   width: 280px;
   min-height: 150px;
   border: 1px solid @gray-form;
+  margin: 0 20px;
 
   @media (min-width: @tablet-width) {
     width: 613px;

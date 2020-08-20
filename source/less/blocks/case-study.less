@@ -218,8 +218,10 @@
 
 .case-study__picture-before {
   position: relative;
+  display: none;
 
   @media (min-width: @tablet-width) {
+    display: block;
     width: 354px;
     height: 607px;
     order: 1;
@@ -233,19 +235,23 @@
 
 .case-study__before {
   position: absolute;
-  z-index: 1;
   left: 10px;
-  display: none;
 
   @media (min-width: @tablet-width) {
-    display: block;
     left: 0;
     margin-left: -125px;
   }
 }
 
 .case-study__picture-after {
+  display: none;
+
+  &--active {
+    display: block;
+  }
+
   @media (min-width: @tablet-width) {
+    display: block;
     width: 354px;
     height: 620px;
     padding-left: 200px;
@@ -254,9 +260,7 @@
 }
 
 .case-study__after {
-  position: relative;
-  left: -5px;
-  z-index: 5;
+  margin-left: -5px;
 }
 
 .case-study__wrapper-button {
@@ -268,17 +272,24 @@
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
-    display: none;
+    width: 593px;
   }
 }
 
 .case-study__switch {
+  display: flex;
+  align-items: center;
+  position: relative;
   width: 84px;
   height: 14px;
   border: 1px solid @gray-frame;
   border-radius: 6px;
   background-color: @white;
-  position: relative;
+  padding: 0 5px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .case-study__switch-handle {
@@ -287,19 +298,30 @@
   position: absolute;
   width: 81px;
   padding: 3px 6px;
+
+  &--before,
+  &--after {
+    width: 25px;
+    height: 6px;
+    border-radius: 6px;
+    background-color: @green;
+  }
 }
 
 .case-study__button-off,
 .case-study__button-on {
-  width: 35px;
-  height: 6px;
+  width: 45px;
+  min-height: 30px;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  background-color: transparent;
   border: none;
-  border-radius: 6px;
-  background-color: @green;
-}
+  padding: 0;
 
-.case-study__button-off {
-  display: none;
+  @media (min-width: @tablet-width) {
+    border-bottom: 1px dotted @black;
+  }
 }
 
 .case-study__wrapper-range {
@@ -309,29 +331,25 @@
     display: none;
   }
 }
-//Оформление инпут рэндж
-.case-study__range {
+//Оформление ползунка
+.case-study__range-controls {
+  position: relative;
   width: 428px;
   height: 6px;
-  background: transparent;
-  margin-left: 25px;
-  margin-right: 25px;
-  //оформление ползунка
-  &::-webkit-slider-thumb {
-    border: 1px solid @gray-frame;
-    height: 34px;
-    width: 34px;
-    border-radius: 50px;
-    background-color: transparent;
-    cursor: pointer;
-    margin-top: -5px;
-  }
-  //оформление дорожки
-  &::-webkit-slider-runnable-track {
-    width: 428px;
-    height: 6px;
-    cursor: pointer;
-    background-color: @gray-frame;
-    border-radius: 6px;
-  }
+  background-color: @gray-frame;
+  border-radius: 6px;
+}
+
+.case-study__slider {
+  position: absolute;
+  top: -15px;
+  left: 200px;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 12px solid @white;
+  background-color: @green;
+  border-radius: 50%;
+  box-shadow: 1px 1px 3px @range;
+  cursor: pointer;
 }

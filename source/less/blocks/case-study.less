@@ -21,7 +21,7 @@
   @media (min-width: @tablet-width) {
     width: 768px;
     padding: 0;
-    border: 1px solid @border;
+    border-top: 1px solid @border;
   }
 
   @media (min-width: @desktop-width) {
@@ -299,8 +299,7 @@
   width: 81px;
   padding: 3px 6px;
 
-  &--before,
-  &--after {
+  &--position {
     width: 25px;
     height: 6px;
     border-radius: 6px;
@@ -308,8 +307,7 @@
   }
 }
 
-.case-study__button-off,
-.case-study__button-on {
+.case-study__button {
   width: 45px;
   min-height: 30px;
   font-size: 16px;
@@ -332,6 +330,7 @@
   }
 }
 //Оформление ползунка
+
 .case-study__range-controls {
   position: relative;
   width: 428px;

@@ -97,6 +97,31 @@
   }
 }
 
+.production__item-picture-small {
+  width: 68px;
+  min-height: 86px;
+
+  @media (min-width: @tablet-width) {
+    width: 163px;
+    min-height: 174px;
+  }
+}
+
+.production__item-picture-big {
+  width: 84px;
+  min-height: 100px;
+
+  @media (min-width: @tablet-width) {
+    width: 168px;
+    min-height: 200px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 172px;
+    min-height: 202px;
+  }
+}
+
 .production__item-wrapper {
   display: flex;
   flex-direction: column;

@@ -308,17 +308,27 @@
 }
 
 .case-study__button {
-  width: 45px;
+  width: 43px;
   min-height: 30px;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
   background-color: transparent;
   border: none;
+  outline: none;
   padding: 0;
 
   @media (min-width: @tablet-width) {
-    border-bottom: 1px dotted @black;
+    border-bottom: 1px dotted @opacity-intermittent;
+  }
+
+  &:focus,
+  &:hover {
+    border-bottom: 1px solid @opacity-solid;
+  }
+
+  &:active {
+    border-bottom: none;
   }
 }
 
@@ -350,5 +360,18 @@
   background-color: @green;
   border-radius: 50%;
   box-shadow: 1px 1px 3px @range;
+  outline: none;
   cursor: pointer;
+
+  &:active::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 1px solid @green;
+  }
 }

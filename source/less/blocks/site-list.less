@@ -38,6 +38,15 @@
     border-top: 1px solid @border;
   }
 
+  &:focus,
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: @tablet-width) {
     border-bottom: none;
 
@@ -51,6 +60,15 @@
 
     &--active-green {
       border-bottom: 2px solid @green;
+    }
+
+    &--active-green:active,
+    &--active-green:focus,
+    &--active-green:hover,
+    &--active:active,
+    &--active:focus,
+    &--active:hover {
+      opacity: 1;
     }
   }
 

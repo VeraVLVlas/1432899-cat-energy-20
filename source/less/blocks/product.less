@@ -147,6 +147,15 @@
   border: none;
   margin: 3px auto 0;
 
+  &:focus,
+  &:hover {
+    background-color: @basic-green;
+  }
+
+  &:active {
+    color: @opacity;
+  }
+
   @media (min-width: @tablet-width) {
     position: relative;
     z-index: 4;

@@ -103,6 +103,15 @@
   text-align: center;
   border: none;
 
+  &:focus,
+  &:hover {
+    background-color: @basic-green;
+  }
+
+  &:active {
+    color: @opacity;
+  }
+
   @media (min-width: @tablet-width) {
     width: 632px;
     min-height: 39px;

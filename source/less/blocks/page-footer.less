@@ -41,6 +41,15 @@
   padding-bottom: 32px;
   border-bottom: 1px solid @gray-line;
 
+  &:focus,
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
   @media (min-width: @tablet-width) {
     padding: 0;
     border-bottom: none;
@@ -69,6 +78,10 @@
 .page-footer__copyright {
   display: flex;
   align-items: center;
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: @tablet-width) {
     display: flex;

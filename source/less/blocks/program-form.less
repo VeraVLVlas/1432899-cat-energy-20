@@ -43,9 +43,22 @@
 }
 
 .program-form__fieldset {
+  position: relative;
   border: none;
   margin: 0;
   padding: 0;
+
+  &--green-border::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    margin-left: -50vw;
+    z-index: -1;
+    border: 2px solid @green;
+    width: 100vw;
+  }
 
   &--border {
     border-bottom: 1px solid @gray-background;
@@ -54,8 +67,24 @@
   @media (min-width: @tablet-width) {
     padding: 0;
 
+    &--green-border::before {
+      top: 46px;
+    }
+
     &--comments {
       display: flex;
+    }
+
+    &--comments::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 46px;
+      left: 48%;
+      margin-left: -50vw;
+      z-index: -1;
+      border: 2px solid @green;
+      width: 100vw;
     }
 
     &--border {
@@ -105,7 +134,7 @@
     border: 1px solid @dark-grey;
   }
 
-  &:invalid {
+  &--invalid {
     border: 1px solid @error;
   }
 
@@ -343,19 +372,21 @@
   padding-top: 26px;
   padding-bottom: 32px;
   padding-left: 19px;
-  width: 189px;
-  min-height: 26px;
   background-color: white;
 
-  &::after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 40px;
-    left: -1px;
-    z-index: -1;
-    border: 2px solid @green;
-    width: 100vw;
+  &--data {
+    width: 228px;
+    min-height: 26px;
+  }
+
+  &--border-comments {
+    width: 153px;
+    min-height: 26px;
+  }
+
+  &--additionally {
+    width: 185px;
+    min-height: 26px;
   }
 
   &--border {
@@ -363,24 +394,11 @@
     min-height: 52px;
     padding-left: 19px;
     background-color: white;
-
-    &::after {
-      content: "";
-      display: block;
-      position: absolute;
-      top: 40px;
-      left: -1px;
-      z-index: -1;
-      border: 2px solid @green;
-      width: 100vw;
-    }
   }
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
-    width: 260px;
-    min-height: 36px;
 
     &--border {
       margin-bottom: 76px;
@@ -388,18 +406,24 @@
       min-height: 36px;
     }
 
-    &::after {
-      top: 48px;
-      left: -70px;
+    &--data {
+      width: 328px;
+      min-height: 26px;
+    }
+
+    &--border-comments {
+      width: 223px;
+      min-height: 26px;
+    }
+
+    &--additionally {
+      width: 265px;
+      min-height: 26px;
     }
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 57px;
-
-    &::after {
-      left: -110px;
-    }
   }
 }
 

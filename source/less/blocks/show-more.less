@@ -71,6 +71,15 @@
   vertical-align: middle;
   min-height: 40px;
 
+  &:focus,
+  &:hover {
+    background-color: @button-open;
+  }
+
+  &:active {
+    color: @opacity-open;
+  }
+
   @media (min-width: @desktop-width) {
     padding: 20px 24px;
   }

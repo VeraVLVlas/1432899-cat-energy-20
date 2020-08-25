@@ -37,7 +37,7 @@
 }
 
 .list-of-programs__item:first-child {
-  box-shadow: @shadow;
+  box-shadow: 0 4px 4px @shadow;
 
   @media (min-width: @tablet-width) {
     margin-top: 0;
@@ -185,6 +185,10 @@
   text-transform: uppercase;
   text-decoration: none;
   color: @black;
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 20px;

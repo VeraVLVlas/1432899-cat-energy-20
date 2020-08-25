@@ -28,6 +28,11 @@
       background-repeat: no-repeat;
       width: 720px;
       min-height: 696px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/index-background-desktop@2x.jpg");
+        background-size: 720px auto;
+      }
     }
   }
 }
@@ -40,6 +45,11 @@
   background-repeat: no-repeat no-repeat;
   background-size: cover;
   text-align: center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+    background-size: 320px auto;
+  }
 
   @media (min-width: @tablet-width) {
     width: 709px;
@@ -104,6 +114,9 @@
 }
 
 .product__picture {
+  width: 280px;
+  min-height: 270px;
+
   @media (min-width: @tablet-width) {
     position: absolute;
     left: -1px;
@@ -133,6 +146,15 @@
   text-align: center;
   border: none;
   margin: 3px auto 0;
+
+  &:focus,
+  &:hover {
+    background-color: @basic-green;
+  }
+
+  &:active {
+    color: @opacity;
+  }
 
   @media (min-width: @tablet-width) {
     position: relative;

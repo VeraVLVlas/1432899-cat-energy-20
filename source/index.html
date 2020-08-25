@@ -125,10 +125,18 @@
           <div class="case-study__view-result">
             <div class="case-study__wrapper-results">
               <div class="case-study__picture-before">
-                <img class="case-study__before" src="img/after-mobile@1x.png" width="251" height="240" alt="Фото кота до программы">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+                  <img class="case-study__before" src="img/before-mobile@1x.png 1x" srcset="img/before-mobile@2x.png 2x" width="300" height="232" alt="Фото кота после программы">
+                </picture>
               </div>
               <div class="case-study__picture-after case-study__picture-after--active">
-                <img class="case-study__after" src="img/before-mobile@1x.png" width="300" height="232" alt="Фото кота после программы">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+                  <img class="case-study__after" src="img/after-mobile@1x.png 1x" srcset="img/after-mobile@2x.png 2x" width="251" height="240" alt="Фото кота до программы">
+                </picture>
               </div>
             </div>
             <div class="case-study__wrapper-button">

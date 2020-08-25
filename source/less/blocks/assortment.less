@@ -74,12 +74,37 @@
 
 .assortment__stock-wrapper {
   width: 280px;
-  height: 288px;
+  min-height: 288px;
   background-color: @dark-grey;
   background-image: url("/img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
   margin-top: 39px;
   margin-bottom: 35px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("/img/gift-photo-mobile@2x.jpg");
+  }
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+    width: 708px;
+    min-height: 200px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/gift-photo-tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+    width: 245px;
+    min-height: 289px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/gift-photo-desktop@2x.jpg");
+    }
+  }
 }
 
 .assortment__stock {

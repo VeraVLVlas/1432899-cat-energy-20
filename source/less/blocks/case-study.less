@@ -1,7 +1,6 @@
 .case-study {
   width: 320px;
   background-color: @light-gray;
-  overflow-x: hidden;
 
   @media (min-width: @tablet-width) {
     width: 768px;
@@ -10,7 +9,6 @@
 
   @media (min-width: @desktop-width) {
     width: 1440px;
-    background-color: @dull-gray;
   }
 }
 
@@ -21,7 +19,7 @@
 
   @media (min-width: @tablet-width) {
     width: 768px;
-    padding: 0;
+    padding: 43px 0 0;
     border-top: 1px solid @border;
   }
 
@@ -35,8 +33,10 @@
 .case-study__caption {
   font-size: 36px;
   line-height: 40px;
+  font-style: normal;
+  font-weight: normal;
   margin: 0;
-  padding-top: 27px;
+  padding-top: 28px;
 
   @media (min-width: @tablet-width) {
     padding: 0 30px;
@@ -48,27 +48,32 @@
     display: flex;
     align-items: center;
     width: 1440px;
-    min-height: 225px;
+    min-height: 125px;
     background-color: @white;
-    padding: 0 110px;
-    margin: 0;
+    padding: 0 110px 20px;
+    margin: 0 0 33px;
   }
 }
 
 .case-study__wrapper-study {
   @media (min-width: @desktop-width) {
-    width: 1440px;
-    padding: 0 110px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    background-color: @dull-gray;
+    width: 1440px;
+    height: 462px;
+    padding: 0 110px;
   }
 }
 
 .case-study__wrapper-text {
   @media (min-width: @tablet-width) {
+    width: 708px;
+    min-height: 72px;
     padding: 0 30px;
-    margin-bottom: 250px;
+    margin-bottom: 252px;
   }
 
   @media (min-width: @desktop-width) {
@@ -83,10 +88,22 @@
   font-size: 14px;
   line-height: 18px;
   color: @dark-grey;
+  width: 270px;
+  margin: 32px 0 23px;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 24px;
+    width: 702px;
+    height: 72px;
+    margin-top: 63px;
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 436px;
+    min-height: 96px;
+    margin: 124px 0 68px;
   }
 }
 
@@ -123,23 +140,28 @@
 
 .case-study__effect {
   width: 124px;
-  height: 66px;
+  height: 55px;
   border: 1px solid @gray-frame;
   border-radius: 3px;
 
   @media (min-width: @tablet-width) {
     width: 162px;
-    height: 75px;
+    height: 72px;
+
+    &:last-child {
+      margin-right: 5px;
+    }
   }
 }
 
 .case-study__digit {
   margin: 0;
-  width: 124px;
-  padding-top: 15px;
-  padding-bottom: 14px;
+  width: 119px;
+  padding-top: 13px;
+  padding-bottom: 9px;
   font-size: 24px;
   line-height: 24px;
+  text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
     font-size: 30px;
@@ -182,13 +204,23 @@
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
-    width: 204px;
+    width: 194px;
     text-align: end;
+    margin: -13px 0 0;
   }
 
   @media (min-width: @desktop-width) {
     width: 436px;
     text-align: left;
+    margin: 60px 0 0;
+  }
+}
+
+.case-study__sum {
+  @media (min-width: @desktop-width) {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 60px;
   }
 }
 
@@ -197,27 +229,41 @@
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
-    position: relative;
-    min-height: 462px;
+    height: 462px;
     background-color: @light-gray;
     margin-top: 191px;
   }
 
   @media (min-width: @desktop-width) {
     width: 690px;
-    min-height: 656px;
     margin-top: 0;
     background-color: @dull-gray;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: @light-gray;
+      min-width: 395px;
+      min-height: 463px;
+    }
   }
 }
 
 .case-study__wrapper-results {
   @media (min-width: @tablet-width) {
-    position: absolute;
-    top: -220px;
-    padding: 0 30px;
     display: flex;
     justify-content: center;
+    transform: translateY(-200px);
+    padding: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 61px;
+    padding: 0;
+    transform: translateY(-224px);
   }
 }
 
@@ -234,16 +280,6 @@
 
   @media (min-width: @desktop-width) {
     width: 462px;
-
-    &::before {
-      content: "";
-      display: block;
-      background-color: @light-gray;
-      width: 560px;
-      height: 462px;
-      position: absolute;
-      top: 220px;
-    }
   }
 }
 
@@ -253,19 +289,23 @@
 
   @media (min-width: @tablet-width) {
     left: 0;
-    width: 354px;
-    min-height: 607px;
-    margin-left: -173px;
+    width: 664px;
+    min-height: 521px;
+    margin-top: 34px;
+    margin-left: -323px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 604px;
-    min-height: 607px;
-    margin-left: -303px;
+    width: 628px;
+    min-height: 520px;
+    margin-left: -328px;
   }
 }
 
 .case-study__picture-before {
+  margin-top: 35px;
+  margin-bottom: 26px;
+
   @media (min-width: @tablet-width) {
     display: block;
     width: 354px;
@@ -273,36 +313,52 @@
     padding-left: 200px;
     overflow: hidden;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 574px;
+  }
 }
 
 .case-study__before {
-  margin-left: -5px;
+  width: 318px;
+  height: 239px;
+  margin-left: -20px;
 
   @media (min-width: @tablet-width) {
-    width: 354px;
-    min-height: 620px;
-    margin-left: -30px;
+    width: 685px;
+    min-height: 521px;
+    margin-left: -182px;
+    margin-top: -1px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 465px;
-    margin-left: -90px;
+    width: 695px;
+    min-height: 520px;
+    margin-left: -175px;
   }
 }
 
 .case-study__wrapper-button {
-  width: 165px;
+  width: 202px;
   min-height: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 31px;
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
+    width: 563px;
+    transform: translateY(-320px);
+    padding-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
     position: relative;
-    top: 350px;
-    left: -1px;
-    width: 593px;
+    transform: translateY(-324px);
+    margin-right: -40px;
+    margin-top: 0;
+    padding-bottom: 0;
   }
 }
 
@@ -330,7 +386,7 @@
   padding: 3px 6px;
 
   &--position {
-    width: 25px;
+    width: 35px;
     height: 6px;
     border-radius: 6px;
     background-color: @green;
@@ -349,6 +405,10 @@
   padding: 0;
 
   @media (min-width: @tablet-width) {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
     border-bottom: 1px dotted @opacity-intermittent;
   }
 
@@ -363,8 +423,6 @@
 }
 
 .case-study__wrapper-range {
-  padding: 67px 0;
-
   @media (max-width: @mobile-width) {
     display: none;
   }

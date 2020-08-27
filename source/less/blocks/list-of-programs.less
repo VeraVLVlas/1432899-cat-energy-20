@@ -24,7 +24,7 @@
     text-align: left;
     margin-top: 30px;
     margin-bottom: 30px;
-    padding: 77px 62px 53px 53px;
+    padding: 67px 62px 53px 53px;
   }
 
   @media (min-width: @desktop-width) {
@@ -32,7 +32,7 @@
     height: 374px;
     margin-top: 0;
     margin-bottom: 0;
-    padding: 41px 51px 55px 52px;
+    padding: 30px 51px 55px 52px;
   }
 }
 
@@ -46,11 +46,20 @@
 }
 
 .list-of-programs__contents {
+  position: relative;
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
+  padding-top: 10px;
   margin: 0;
-  position: relative;
+
+  &--picture-pro::before {
+    margin-top: -6px;
+  }
+
+  &--picture-slim::before {
+    margin-top: -6px;
+  }
 
   &--picture-pro::before,
   &--picture-slim::before {
@@ -72,8 +81,8 @@
     background-image: url("../img/icon-cat-slim.svg");
     background-repeat: no-repeat;
     position: absolute;
-    left: 3px;
-    transform: translateY(-40px);
+    left: 9px;
+    transform: translateY(-46px);
   }
 
   &--picture-pro::after {
@@ -84,42 +93,45 @@
     background-image: url("../img/icon-cat-pro.svg");
     background-repeat: no-repeat;
     position: absolute;
-    left: -11px;
-    transform: translateY(-25px);
+    left: -8px;
+    transform: translateY(-32px);
   }
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
+    font-style: normal;
+    font-weight: normal;
 
     &--picture-pro::before,
     &--picture-slim::before {
       width: 200px;
       height: 200px;
       float: right;
-      margin: 0;
+      margin: 15px 0 0;
     }
 
     &--picture-slim::after {
-      width: 140px;
-      height: 192px;
-      left: 422px;
-      transform: translateY(-45px);
+      width: 142px;
+      height: 190px;
+      left: 424px;
+      transform: translateY(-30px);
     }
 
     &--picture-pro::after {
-      width: 268px;
-      height: 112px;
-      left: 350px;
-      transform: translateY(10px);
+      width: 270px;
+      height: 115px;
+      left: 359px;
+      transform: translateY(22px);
     }
   }
 
   @media (min-width: @desktop-width) {
-    width: 400px;
-    min-height: 106px;
     display: flex;
     align-items: center;
+    width: 400px;
+    min-height: 106px;
+    padding-top: 12px;
 
     &--picture-pro::before,
     &--picture-slim::before {
@@ -127,6 +139,7 @@
       height: 100px;
       float: left;
       margin-right: 62px;
+      margin-top: 6px;
     }
 
     &--picture-slim::after {
@@ -155,7 +168,7 @@
   width: 227px;
   min-height: 90px;
   padding-bottom: 23px;
-  margin: 22px 0 15px;
+  margin: 29px 0 20px;
   border-bottom: 1px solid @gray-line;
 
   @media (min-width: @tablet-width) {
@@ -164,7 +177,7 @@
     font-size: 16px;
     line-height: 24px;
     margin-top: 24px;
-    margin-bottom: 48px;
+    margin-bottom: 30px;
     border-bottom: none;
 
     &--height {
@@ -176,6 +189,8 @@
     width: 467px;
     min-height: 72px;
     padding-bottom: 0;
+    margin-top: 38px;
+    margin-bottom: 27px;
   }
 }
 

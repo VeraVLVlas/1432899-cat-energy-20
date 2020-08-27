@@ -1,10 +1,10 @@
 .advantages {
   width: 280px;
-  padding: 0 20px;
+  padding: 9px 20px 0;
 
   @media (min-width: @tablet-width) {
     width: 709px;
-    padding: 0 30px;
+    padding: 15px 30px 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -16,14 +16,23 @@
 .advantages__heading {
   font-size: 36px;
   line-height: 40px;
+  font-weight: 400;
   width: 255px;
   min-height: 40px;
+  margin: 0 0 38px;
 
   @media (min-width: @tablet-width) {
     font-size: 60px;
     line-height: 60px;
     width: 505px;
     min-height: 60px;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 71px 0 30px;
+    font-style: normal;
+    font-weight: normal;
   }
 }
 
@@ -55,11 +64,11 @@
   position: relative;
 
   &:last-child {
-    margin-bottom: 40px;
+    margin-bottom: 49px;
   }
 
   &:not(:last-child) {
-    margin-bottom: 20px;
+    margin-bottom: 27px;
   }
 
   &::before {
@@ -83,25 +92,25 @@
     background-repeat: no-repeat;
     background-position: center;
     position: absolute;
-    top: 1px;
-    transform: translateY(-2px);
+    top: -1px;
+    transform: translateX(-1px);
   }
 
   &--useful::after {
     background-image: url("../img/advantage-leaf@1x.png");
+    background-size: 48px auto;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/advantage-leaf@2x.png");
-      background-size: 60px auto;
     }
   }
 
   &--instant::after {
     background-image: url("../img/advantage-powder@1x.png");
+    background-size: 48px auto;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/advantage-powder@2x.png");
-      background-size: 60px auto;
     }
   }
 
@@ -110,7 +119,7 @@
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/advantage-dining@2x.png");
-      background-size: 60px auto;
+      background-size: 48px auto;
     }
   }
 
@@ -119,13 +128,13 @@
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/advantage-clock@2x.png");
-      background-size: 60px auto;
+      background-size: 48px auto;
     }
   }
 
   @media (min-width: @tablet-width) {
-    width: 230px;
-    height: 280px;
+    width: 246px;
+    min-height: 280px;
     font-size: 16px;
     line-height: 24px;
     padding-top: 42px;
@@ -137,7 +146,7 @@
     }
 
     &:nth-child(odd) {
-      margin-right: 153px;
+      margin-right: 139px;
     }
 
     &::before {
@@ -155,7 +164,7 @@
     &--useful::after {
       width: 80px;
       height: 80px;
-      top: 45px;
+      top: 42px;
     }
   }
 
@@ -185,7 +194,7 @@
     color: @dull-gray;
     position: absolute;
     top: 0;
-    right: -10px;
+    right: 18px;
     z-index: -1;
   }
 }

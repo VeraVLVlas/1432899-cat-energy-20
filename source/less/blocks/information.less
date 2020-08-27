@@ -4,21 +4,24 @@
   align-items: center;
   width: 320px;
   min-height: 114px;
-  padding: 0 20px;
+  padding: 14px 20px 0;
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
-    width: 625px;
-    min-height: 201px;
-    padding: 0;
+    width: 768px;
+    min-height: 204px;
+    background-color: white;
+    padding: 0 72px;
   }
 
   @media (min-width: @desktop-width) {
     position: absolute;
+    left: 110px;
+    transform: translateY(95px);
     width: 570px;
     min-height: 201px;
     background-color: @white;
-    padding: 0 76px;
+    padding: 0 76px 7px;
   }
 }
 
@@ -28,12 +31,15 @@
   text-transform: uppercase;
   color: @cloudy-black;
   width: 140px;
-  min-height: 64px;
+  min-height: 71px;
   margin: 0;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
-    line-height: 21px;
+    line-height: 24px;
+    width: 171px;
+    min-height: 94px;
+    padding-top: 16px;
   }
 }
 
@@ -50,5 +56,20 @@
     font-size: 16px;
     width: 159px;
     min-height: 80px;
+    text-align: right;
+    padding-top: 12px;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: left;
+    padding-right: 5px;
+    width: 169px;
+  }
+}
+
+.information__details-city {
+  @media (min-width: @tablet-width) {
+    display: block;
+    padding-top: 19px;
   }
 }

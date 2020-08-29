@@ -65,6 +65,10 @@
     padding: 0;
     border-bottom: none;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 8px;
+  }
 }
 
 .page-footer__picture {
@@ -80,13 +84,20 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   min-height: 68px;
+  width: 286px;
 
   &:active {
     opacity: 0.3;
   }
 
   @media (min-width: @tablet-width) {
-    display: flex;
+    width: 163px;
+    margin-top: -13px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -1px;
   }
 }

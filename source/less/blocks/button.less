@@ -11,7 +11,7 @@
   min-height: 40px;
   text-align: center;
   border: none;
-  margin: 0 auto;
+  margin: -6px auto 0;
 
   &:focus,
   &:hover {
@@ -20,6 +20,12 @@
 
   &:active {
     color: @opacity;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 11px 93px;
+    width: 246px;
+    margin: -6px 0 0 42px;
   }
 
   @media (min-width: @desktop-width) {

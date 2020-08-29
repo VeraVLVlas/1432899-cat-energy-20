@@ -72,7 +72,7 @@
     float: left;
     margin-right: 19px;
   }
-
+  /*
   &--picture-slim::after {
     content: "";
     display: block;
@@ -95,7 +95,7 @@
     position: absolute;
     left: -8px;
     transform: translateY(-32px);
-  }
+  } */
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
@@ -110,8 +110,7 @@
       float: right;
       margin: 15px 0 0;
     }
-
-    &--picture-slim::after {
+    /*    &--picture-slim::after {
       width: 142px;
       height: 190px;
       left: 424px;
@@ -123,7 +122,7 @@
       height: 115px;
       left: 359px;
       transform: translateY(22px);
-    }
+    }*/
   }
 
   @media (min-width: @desktop-width) {
@@ -141,8 +140,7 @@
       margin-right: 62px;
       margin-top: 6px;
     }
-
-    &--picture-slim::after {
+    /*  &--picture-slim::after {
       width: 70px;
       height: 97px;
       left: 15px;
@@ -154,7 +152,47 @@
       height: 56px;
       left: -18px;
       transform: translateY(1px);
-    }
+    } */
+  }
+}
+
+.list-of-programs__cat-slim {
+  position: absolute;
+  top: 0;
+  margin-left: -60px;
+
+  @media (min-width: @tablet-width) {
+    top: 13px;
+    width: 140px;
+    height: 192px;
+    margin-left: 423px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 11px;
+    width: 70px;
+    height: 97px;
+    margin-left: 15px;
+  }
+}
+
+.list-of-programs__cat-pro {
+  position: absolute;
+  top: 3px;
+  margin-left: -76px;
+
+  @media (min-width: @tablet-width) {
+    top: 66px;
+    width: 268px;
+    height: 112px;
+    margin-left: 360px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 134px;
+    height: 56px;
+    margin-left: -19px;
+    top: 36px;
   }
 }
 
@@ -195,6 +233,7 @@
 }
 
 .list-of-programs__link {
+  position: relative;
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
@@ -208,5 +247,27 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
+  }
+}
+
+.list-of-programs__arrow {
+  position: absolute;
+  top: 6px;
+  width: 32px;
+  height: 11px;
+  margin-left: 10px;
+
+  &--hover {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-left: 20px;
+    top: 8px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 24px;
+    top: 9px;
   }
 }

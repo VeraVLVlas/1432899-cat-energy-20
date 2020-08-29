@@ -32,7 +32,7 @@
   @media (min-width: @tablet-width) {
     width: 768px;
     min-height: 60px;
-    margin-bottom: 57px;
+    margin-bottom: 65px;
     border-bottom: none;
   }
 
@@ -53,6 +53,7 @@
     display: flex;
     justify-content: space-between;
     width: 768px;
+    padding: 0 30px;
     margin-top: 24px;
   }
 
@@ -135,11 +136,15 @@
   border: none;
   outline: none;
   padding: 0;
-  background-image: url("../img/icon-mobile-menu.svg");
-  background-repeat: no-repeat;
   margin-top: 5px;
 
   @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.page-header__button {
+  &--toggle {
     display: none;
   }
 }

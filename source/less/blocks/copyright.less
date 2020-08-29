@@ -8,3 +8,24 @@
     margin-right: 0;
   }
 }
+
+.copyright__link {
+  @media (min-width: @tablet-width) {
+    position: relative;
+  }
+}
+
+.copyright__logo-html {
+  fill: @gray-data;
+
+  &:focus,
+  &:hover {
+    fill: @green;
+  }
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: -19px;
+    left: -34px;
+  }
+}

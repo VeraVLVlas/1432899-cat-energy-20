@@ -10,23 +10,27 @@
 
   @media (min-width: @tablet-width) {
     width: 123px;
-    margin-top: -9px;
-    margin-left: 18px;
+    margin-top: -11px;
+    margin-left: 10px;
   }
-}
-
-.social__link {
-  text-decoration: none;
-  color: @black;
 }
 
 .social__icon-fb,
 .social__icon-inst,
 .social__icon-vk {
   fill: @gray-data;
+}
 
-  &:focus,
-  &:hover {
+.social__link {
+  text-decoration: none;
+  color: @black;
+
+  &:focus .social__icon-fb,
+  &:focus .social__icon-inst,
+  &:focus .social__icon-vk,
+  &:hover .social__icon-fb,
+  &:hover .social__icon-inst,
+  &:hover .social__icon-vk {
     fill: @green;
   }
 

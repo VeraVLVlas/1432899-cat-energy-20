@@ -6,15 +6,18 @@
     display: block;
     position: absolute;
     left: -1px;
-    top: 40px;
+    top: 43px;
     z-index: -1;
     border: 2px solid @green;
     width: 100vw;
   }
 
   @media (min-width: @tablet-width) {
+    width: 768px;
+    margin: 0 auto;
+
     &::before {
-      top: 32px;
+      top: 34px;
       left: 50%;
       margin-left: -50vw;
     }
@@ -23,6 +26,7 @@
   @media (min-width: @desktop-width) {
     width: 1440px;
     padding: 0 110px;
+    margin: 0;
   }
 }
 
@@ -35,34 +39,34 @@
   width: 267px;
   min-height: 24px;
   background-color: white;
-  margin: 0;
-  padding-top: 28px;
-  padding-bottom: 34px;
+  padding-top: 30px;
   padding-left: 19px;
+  margin: 0 0 33px;
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
     background-color: white;
     text-align: center;
-    padding-top: 10px;
+    padding-top: 13px;
     padding-left: 0;
     width: 419px;
     min-height: 36px;
-    margin-bottom: 47px;
+    margin-bottom: 80px;
     margin-left: 26px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 388px;
-    margin-left: 0;
+    width: 414px;
     padding-left: 0;
+    margin-left: -39px;
+    margin-bottom: 78px;
   }
 }
 
 .assortment__wrapper {
   width: 320px;
-  padding: 0 20px;
+  padding: 0 21px;
 
   @media (min-width: @tablet-width) {
     width: 768px;
@@ -89,7 +93,7 @@
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  margin-top: 39px;
+  margin-top: 41px;
   margin-bottom: 35px;
 
   @media (min-resolution: 2dppx) {
@@ -102,7 +106,7 @@
     background-image: url("../img/gift-photo-tablet@1x.jpg");
     width: 708px;
     min-height: 200px;
-    margin-top: 60px;
+    margin-top: 68px;
     margin-bottom: 76px;
 
     @media (min-resolution: 2dppx) {
@@ -115,6 +119,8 @@
     flex-direction: column;
     width: 245px;
     min-height: 289px;
+    margin-top: 0;
+    margin-bottom: 87px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/gift-photo-desktop@2x.jpg");
@@ -133,6 +139,10 @@
     margin-top: 52px;
     margin-right: 154px;
     margin-left: 89px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 65px 0 62px;
   }
 }
 

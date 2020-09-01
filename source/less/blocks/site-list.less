@@ -26,7 +26,7 @@
     font-size: 20px;
     width: 478px;
     min-height: 40px;
-    margin-left: 142px;
+    margin-left: 132px;
     padding-top: 72px;
   }
 }
@@ -40,39 +40,13 @@
     border-top: 1px solid @border;
   }
 
-  &:focus,
-  &:hover {
-    opacity: 0.6;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
-
   @media (min-width: @tablet-width) {
-    min-height: 42px;
-    padding-top: 10px;
+    min-height: 45px;
+    padding-top: 13px;
     border-bottom: none;
 
     &:first-child {
       border-top: none;
-    }
-
-    &--active {
-      border-bottom: 2px solid @green;
-    }
-
-    &--active-green {
-      border-bottom: 2px solid @green;
-    }
-
-    &--active-green:active,
-    &--active-green:focus,
-    &--active-green:hover,
-    &--active:active,
-    &--active:focus,
-    &--active:hover {
-      opacity: 1;
     }
   }
 
@@ -98,8 +72,36 @@
     padding-right: 0;
   }
 
+  &:focus,
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--active-green {
+    border-bottom: 2px solid @green;
+    padding-bottom: 5px;
+  }
+
+  &--active-green:active,
+  &--active-green:focus,
+  &--active-green:hover,
+  &--active:active,
+  &--active:focus,
+  &--active:hover {
+    opaciy: 1;
+  }
+
   @media (min-width: @desktop-width) {
     color: @white;
+
+    &--active {
+      border-bottom: 2px solid @white;
+      padding-bottom: 7px;
+    }
   }
 }
 

@@ -55,10 +55,10 @@
           </picture>
         </a>
         <button class="page-header__toggle" type="button">
-          <svg class="page-header__button" width="24" height="18">
+          <svg class="page-header__button-icon" width="24" height="18">
             <use xlink:href="#open-menu"></use>
           </svg>
-          <svg class="page-header__button page-header__button--toggle" width="18" height="18">
+          <svg class="page-header__button-icon page-header__button-icon--toggle" width="18" height="18">
             <use xlink:href="#close-menu"></use>
           </svg>
           <span class="visually-hidden">Открыть меню</span>
@@ -69,8 +69,8 @@
           <li class="site-list__item">
             <a class="site-list__link site-list__link-catalog" href="index.html">Главная</a>
           </li>
-          <li class="site-list__item site-list__item--active-green">
-            <a class="site-list__link site-list__link-catalog">Каталог продукции</a>
+          <li class="site-list__item">
+            <a class="site-list__link site-list__link--active-green site-list__link-catalog">Каталог продукции</a>
           </li>
           <li class="site-list__item">
             <a class="site-list__link site-list__link-catalog" href="form.html">Подбор программы</a>
@@ -79,14 +79,14 @@
       </nav>
     </div>
   </header>
-  <main class="page__main">
+  <main class="page__main page__main--inner">
     <h1 class="page__headline">Каталог продукции</h1>
     <section class="production">
       <ul class="production__list">
         <li class="production__item">
           <div class="production__wrapper">
             <div class="production__wrapper-mobile">
-              <a class="production__link-picture " href="#">
+              <a class="production__link-picture" href="#">
                 <picture>
                   <source type="image/webp" srcset="img/chicken-small-desktop@2x.webp 1x, img/chicken-small-desktop@2x.webp 2x">
                   <source type="image/webp" srcset="img/chicken-small-tablet@1x.webp 1x, img/chicken-small-tablet@2x.webp 2x">
@@ -417,12 +417,14 @@
     </section>
   </main>
   <footer class="page-footer">
-    <div class="page-footer__wrapper information">
-      <p class="information__dealer">Приглашаем к&nbsp;сотрудничеству дилеров!
-      </p>
-      <p class="information__address">
-        <span class="information__details-street">ул. Большая Конюшенная, д. 19/8</span>
-        <span class="information__details-city">Санкт-Петербург</span>
+    <div class="page-footer__wrapper information information--inner">
+      <div class="information__wrapper">
+        <p class="information__dealer">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
+        <p class="information__address">
+          <span class="information__details-street">ул. Большая Конюшенная, д. 19/8</span>
+          <span class="information__details-city">Санкт-Петербург</span>
+        </p>
+      </div>
     </div>
     <div class="map">
       <!--Здесь будет интерактивная карта -->

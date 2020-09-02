@@ -48,13 +48,18 @@
   line-height: 40px;
   font-style: normal;
   font-weight: normal;
-  margin: 0;
+  width: 195px;
+  min-height: 40px;
   padding-top: 27px;
+  padding-bottom: 1px;
+  margin: 0;
 
   @media (min-width: @tablet-width) {
+    width: 500px;
     padding: 0 30px;
     font-size: 60px;
     line-height: 60px;
+    padding-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -100,7 +105,8 @@
   line-height: 18px;
   color: @dark-grey;
   width: 270px;
-  margin: 32px 0 23px;
+  min-height: 108px;
+  margin: 32px 0 21px;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
@@ -108,7 +114,7 @@
     width: 702px;
     height: 72px;
     margin-top: 63px;
-    margin-bottom: 53px;
+    margin-bottom: 18px;
   }
 
   @media (min-width: @desktop-width) {
@@ -119,6 +125,9 @@
 }
 
 .case-study__general {
+  width: 280px;
+  min-height: 113px;
+
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
@@ -412,9 +421,11 @@
   background-color: transparent;
   border: none;
   outline: none;
+  border-bottom: 1px dotted transparent;
   padding: 0;
 
   @media (min-width: @tablet-width) {
+    width: 48px;
     font-style: normal;
     font-weight: normal;
     font-size: 20px;

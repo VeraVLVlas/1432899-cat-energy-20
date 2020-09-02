@@ -12,6 +12,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     position: relative;
     z-index: 5;
     width: 1440px;
@@ -74,14 +75,18 @@
   font-size: 36px;
   line-height: 36px;
   color: @white;
-  margin: 0;
-  padding-top: 27px;
+  width: 300px;
+  min-height: 72px;
+  padding-top: 28px;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     font-size: 60px;
     line-height: 60px;
+    width: 529px;
     color: @black;
     padding-top: 67px;
+    margin: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -96,16 +101,20 @@
   line-height: 14px;
   text-transform: uppercase;
   color: @white;
-  margin: 0;
+  width: 198px;
+  min-height: 14px;
   padding-top: 25px;
   padding-bottom: 27px;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 20px;
+    width: 529px;
     color: @black;
     padding-top: 41px;
     padding-bottom: 45px;
+    margin: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -117,6 +126,7 @@
 
 .product__picture {
   width: 301px;
+  height: 270px;
   min-height: 224px;
   margin-left: -19px;
 
@@ -148,8 +158,9 @@
   display: block;
   width: 280px;
   text-align: center;
-  border: none;
   margin: 3px auto 0;
+  border: none;
+  outline: none;
 
   &:focus,
   &:hover {

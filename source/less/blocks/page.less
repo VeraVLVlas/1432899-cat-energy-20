@@ -3,6 +3,7 @@
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
+  overflow-x: hidden;
 }
 
 .page__body {
@@ -17,17 +18,8 @@
   overflow-x: hidden;
 }
 
-.page__main {
-  width: 320px;
+.page__main--inner {
   margin: 0 auto;
-
-  @media (min-width: @tablet-width) {
-    width: 768px;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 1440px;
-  }
 }
 
 .page__headline {
@@ -36,8 +28,8 @@
   font-style: normal;
   font-weight: normal;
   width: 320px;
-  min-height: 104px;
-  margin: 0 0 8px;
+  min-height: 101px;
+  margin: 0 0 1px;
   padding: 27px 20px 0;
   border-bottom: 1px solid @gray-line;
 
@@ -51,12 +43,20 @@
     font-size: 60px;
     line-height: 60px;
     padding: 0 30px;
-    margin-bottom: 38px;
+    margin-bottom: 39px;
     border-bottom: none;
+
+    &--form {
+      margin-bottom: 12px;
+    }
   }
 
   @media (min-width: @desktop-width) {
     padding: 0 110px;
-    margin-bottom: 42px;
+    margin: 0 0 46px;
+
+    &--form {
+      margin-bottom: 15px;
+    }
   }
 }

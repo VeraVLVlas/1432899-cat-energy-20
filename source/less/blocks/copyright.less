@@ -8,3 +8,36 @@
     margin-right: 0;
   }
 }
+
+.copyright__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 68px;
+  width: 286px;
+  outline: none;
+  text-decoration: none;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:focus .copyright__logo-html,
+  &:hover .copyright__logo-html {
+    fill: @green;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 163px;
+    margin-top: -13px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -1px;
+  }
+}
+
+.copyright__logo-html {
+  fill: @gray-data;
+}

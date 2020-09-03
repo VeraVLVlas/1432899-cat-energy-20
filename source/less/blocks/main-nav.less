@@ -4,7 +4,8 @@
   background-color: @white;
   position: absolute;
   top: 66px;
-  display: none;
+  left: 0;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     display: block;
@@ -12,6 +13,7 @@
     min-height: 30px;
     position: relative;
     top: 0;
+    margin: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -26,8 +28,16 @@
   }
 }
 
-.main-nav__wrapper {
-  @media (min-width: @tablet-width) {
-    margin-left: -10px;
+@media (max-width: @mobile-width) {
+  .main-nav--close {
+    display: none;
   }
+
+  .main-nav--open {
+    display: block;
+  }
+}
+
+.main-nav--nojs {
+  display: block;
 }

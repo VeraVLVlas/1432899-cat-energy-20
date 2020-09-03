@@ -1,14 +1,13 @@
 .case-study {
-  width: 320px;
   background-color: @light-gray;
 
   @media (min-width: @tablet-width) {
-    width: 768px;
     background-color: @white;
   }
 
   @media (min-width: @desktop-width) {
-    width: 1440px;
+    height: 597px;
+    background-color: @dull-gray;
   }
 }
 
@@ -16,9 +15,10 @@
   width: 320px;
   padding: 0 20px;
   min-height: 208px;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
-    width: 768px;
+    width: 100%;
     padding: 43px 0 0;
     border-top: 1px solid @border;
   }
@@ -26,7 +26,20 @@
   @media (min-width: @desktop-width) {
     width: 1440px;
     padding: 0;
+    margin: 0 auto;
     border: none;
+  }
+}
+
+.case-study__wrapper-rubber {
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    margin: 0;
   }
 }
 
@@ -35,23 +48,27 @@
   line-height: 40px;
   font-style: normal;
   font-weight: normal;
+  width: 195px;
+  min-height: 40px;
+  padding-top: 27px;
+  padding-bottom: 1px;
   margin: 0;
-  padding-top: 28px;
 
   @media (min-width: @tablet-width) {
+    width: 500px;
     padding: 0 30px;
     font-size: 60px;
     line-height: 60px;
+    padding-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
     display: flex;
     align-items: center;
-    width: 1440px;
+    width: 100vw;
     min-height: 125px;
     background-color: @white;
-    padding: 0 110px 20px;
-    margin: 0 0 33px;
+    padding: 0 110px 75px;
   }
 }
 
@@ -61,8 +78,7 @@
     align-items: center;
     justify-content: space-between;
     position: relative;
-    background-color: @dull-gray;
-    width: 1440px;
+    width: 740px;
     height: 462px;
     padding: 0 110px;
   }
@@ -73,7 +89,7 @@
     width: 708px;
     min-height: 72px;
     padding: 0 30px;
-    margin-bottom: 252px;
+    margin-bottom: 255px;
   }
 
   @media (min-width: @desktop-width) {
@@ -89,7 +105,8 @@
   line-height: 18px;
   color: @dark-grey;
   width: 270px;
-  margin: 32px 0 23px;
+  min-height: 108px;
+  margin: 32px 0 21px;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
@@ -97,21 +114,23 @@
     width: 702px;
     height: 72px;
     margin-top: 63px;
-    margin-bottom: 54px;
+    margin-bottom: 18px;
   }
 
   @media (min-width: @desktop-width) {
     width: 436px;
     min-height: 96px;
-    margin: 124px 0 68px;
+    margin: 124px 0 71px;
   }
 }
 
 .case-study__general {
+  width: 280px;
+  min-height: 113px;
+
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     width: 708px;
     min-height: 64px;
   }
@@ -206,13 +225,20 @@
     font-size: 20px;
     width: 194px;
     text-align: end;
-    margin: -13px 0 0;
+    margin: 12px 0 0;
   }
 
   @media (min-width: @desktop-width) {
     width: 436px;
     text-align: left;
     margin: 60px 0 0;
+  }
+}
+
+.case-study__details {
+  @media (min-width: @tablet-width) {
+    display: inline-block;
+    padding-bottom: 8px;
   }
 }
 
@@ -235,35 +261,29 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 690px;
-    margin-top: 0;
-    background-color: @dull-gray;
-
-    &::before {
-      content: "";
-      display: block;
-      position: absolute;
-      top: 0;
-      right: 0;
-      background-color: @light-gray;
-      min-width: 395px;
-      min-height: 463px;
-    }
+    transform: translate(657px, -479px);
+    width: 620px;
+    margin: 0;
+    background-color: transparent;
   }
 }
 
 .case-study__wrapper-results {
+  margin-bottom: -1px;
+
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: center;
-    transform: translateY(-200px);
+    transform: translateY(-207px);
+    width: 768px;
     padding: 0 30px;
+    margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 61px;
+    width: 620px;
     padding: 0;
-    transform: translateY(-224px);
+    margin: 0;
   }
 }
 
@@ -349,16 +369,15 @@
 
   @media (min-width: @tablet-width) {
     width: 563px;
-    transform: translateY(-320px);
+    transform: translateY(-323px);
     padding-bottom: 0;
+    margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {
     position: relative;
-    transform: translateY(-324px);
-    margin-right: -40px;
-    margin-top: 0;
     padding-bottom: 0;
+    margin: 17px 0 0 103px;
   }
 }
 
@@ -402,9 +421,11 @@
   background-color: transparent;
   border: none;
   outline: none;
+  border-bottom: 1px dotted transparent;
   padding: 0;
 
   @media (min-width: @tablet-width) {
+    width: 48px;
     font-style: normal;
     font-weight: normal;
     font-size: 20px;

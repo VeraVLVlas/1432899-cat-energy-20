@@ -1,5 +1,5 @@
 .product {
-  width: 320px;
+  width: 100%;
   min-height: 500px;
 
   @media (min-width: @tablet-width) {
@@ -15,7 +15,7 @@
     flex-wrap: wrap;
     position: relative;
     z-index: 5;
-    width: 1440px;
+    min-width: 100vw;
     min-height: 696px;
     background-color: transparent;
     padding: 0 0 0 110px;
@@ -39,17 +39,17 @@
 }
 
 .product__wrapper {
-  width: 320px;
+  min-width: 320px;
   height: 305px;
   background-color: @green;
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat no-repeat;
+  background-position: center;
   background-size: cover;
   text-align: center;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/index-background-mobile@2x.jpg");
-    background-size: 320px auto;
   }
 
   @media (min-width: @tablet-width) {

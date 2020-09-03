@@ -14,10 +14,11 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  min-width: 100vw;
   min-height: 68px;
-  width: 286px;
   outline: none;
   text-decoration: none;
+  padding: 0 20px;
 
   &:active {
     opacity: 0.3;
@@ -29,7 +30,8 @@
   }
 
   @media (min-width: @tablet-width) {
-    width: 163px;
+    min-width: 163px;
+    padding: 0;
     margin-top: -13px;
   }
 

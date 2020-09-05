@@ -7,7 +7,6 @@
 
   @media (min-width: @desktop-width) {
     height: 597px;
-    background-color: @dull-gray;
   }
 }
 
@@ -24,9 +23,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 1440px;
     padding: 0;
-    margin: 0 auto;
     border: none;
   }
 }
@@ -65,10 +62,31 @@
   @media (min-width: @desktop-width) {
     display: flex;
     align-items: center;
-    width: 100vw;
+    width: 1440px;
     min-height: 125px;
     background-color: @white;
     padding: 0 110px 75px;
+    margin: 0 auto;
+  }
+}
+
+.case-study__background {
+  @media (min-width: @desktop-width) {
+    position: relative;
+    background-color: @dull-gray;
+    width: 100vw;
+
+    &::before {
+      content: "";
+      display: block;
+      background-color: @light-gray;
+      position: absolute;
+      min-width: 100vw;
+      min-height: 100%;
+      top: 0;
+      left: calc(100% - 50vw);
+      margin-left: 320px;
+    }
   }
 }
 
@@ -78,9 +96,10 @@
     align-items: center;
     justify-content: space-between;
     position: relative;
-    width: 740px;
+    width: 1440px;
     height: 462px;
     padding: 0 110px;
+    margin: 0 auto;
   }
 }
 
@@ -262,8 +281,8 @@
 
   @media (min-width: @desktop-width) {
     transform: translate(657px, -479px);
-    width: 620px;
-    margin: 0;
+    width: 1440px;
+    margin: 0 auto;
     background-color: transparent;
   }
 }

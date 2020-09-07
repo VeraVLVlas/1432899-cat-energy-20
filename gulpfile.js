@@ -39,14 +39,14 @@ const images = () => {
       imagemin.optipng({
         optimizationLevel: 3
       }),
-      imagemin.jpegtran({
+      imagemin.mozjpeg({
         progressive: true
       }),
       imagemin.svgo()
     ]))
 }
 
-exports.images = images;
+exports.imagemin = images;
 
 //webp
 
@@ -55,7 +55,7 @@ const createWebp = () => {
     .pipe(webp({
       quality: 90
     }))
-    .pipe(gulp.dest("source/img"))
+    .pipe(gulp.dest("build/img"))
 }
 
 exports.webp = createWebp;
@@ -86,7 +86,7 @@ const copy = () => {
       "source/fonts/**/*.{woff,woff2}",
       "source/img/**",
       "source/js/**",
-      "source/*.ico"
+      "source/*.html"
     ], {
       base: "source"
     })
@@ -102,7 +102,7 @@ const build = gulp.series(
   copy,
   styles,
   images,
-  webp,
+  createWebp,
   sprite
 );
 

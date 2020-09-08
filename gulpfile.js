@@ -5,12 +5,25 @@ const less = require("gulp-less");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
+const htmlmin = require("gulp-htmlmin");
 const csso = require("gulp-csso");
+const uglify = require("gulp-uglify");
+const pipeline = require("readable-stream").pipeline;
 const rename = require("gulp-rename");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
+
+//HTML
+
+const html =  () => {
+  return gulp.src("source/**/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest("build"));
+}
+
+exports.html = htmlmin
 
 // Styles
 
@@ -30,6 +43,16 @@ const styles = () => {
 }
 
 exports.styles = styles;
+
+//JS
+
+const js = () => {
+  return gulp.src("source/js/**/*.js")
+    .pipe(uglify())
+    .pipe(gulp.dest("build/js"));
+};
+
+exports.js = js;
 
 //Images
 
@@ -100,8 +123,10 @@ exports.copy = copy;
 const build = gulp.series(
   clean,
   copy,
+  htmlmin,
   styles,
   images,
+  js,
   createWebp,
   sprite
 );

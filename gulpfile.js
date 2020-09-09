@@ -42,7 +42,6 @@ const styles = () => {
     .pipe(sync.stream());
 }
 
-exports.styles = styles;
 //JS
 
 const js = () => {
@@ -135,13 +134,11 @@ const server = (done) => {
   done();
 }
 
-exports.server = server;
-
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/less/**/*.less", gulp.series("styles"));
-  gulp.watch("source/*.html", gulp.series("html"));
+  gulp.watch("source/less/**/*.less", gulp.series(styles));
+  gulp.watch("source/*.html", gulp.series(html));
 }
 
 exports.default = gulp.series(

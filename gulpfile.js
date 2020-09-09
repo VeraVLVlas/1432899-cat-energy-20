@@ -10,7 +10,6 @@ const posthtml = require("gulp-posthtml");
 const include = require("posthtml-include");
 const csso = require("gulp-csso");
 const uglify = require("gulp-uglify");
-const pipeline = require("readable-stream").pipeline;
 const rename = require("gulp-rename");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
@@ -20,13 +19,11 @@ const del = require("del");
 //HTML
 
 const html =  () => {
-  return gulp.src("source/**/*.html")
+  return gulp.src("source/*.html")
     .pipe(posthtml([include()]))
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build"));
 }
-
-exports.html = html;
 
 // Styles
 
@@ -51,6 +48,7 @@ exports.styles = styles;
 const js = () => {
   return gulp.src("source/js/**/*.js")
     .pipe(uglify())
+    .pipe(rename({ suffix: ".min" }))
     .pipe(gulp.dest("build/js"));
 };
 

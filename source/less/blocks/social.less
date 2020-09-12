@@ -16,14 +16,14 @@
 }
 
 .social__item {
-  &:not(:last-child) {
-    padding-right: 30px;
+  margin-right: 30px;
+
+  &:nth-child(3n) {
+    margin-right: 0;
   }
 
   @media (min-width: @tablet-width) {
-    &:not(:last-child) {
-      padding-right: 26px;
-    }
+    margin-right: 26px;
   }
 }
 

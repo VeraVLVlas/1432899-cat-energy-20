@@ -1,3 +1,7 @@
+## Посмотреть, как сайт работает в браузере:
+
+Перейдите по [ссылке](https://1432899-cat-energy-20.vercel.app/index.html) чтобы открыть проект в браузере
+
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Вера](https://up.htmlacademy.ru/adaptive/20/user/1432899).
